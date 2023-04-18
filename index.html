@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style> .tab1 {tab-size: 2;}
+    .tab2 {tab-size: 4;}
+    .tab4 {tab-size: 8;}
+    </style>
+
+    <head>
+        <title>Linguagem Pawn</title>
+        <body>
+            <h1>Variáveis e suas Funcionalidades</h1>
+            <hr>
+            <p style="font-family:Arial">Ola desenvolvedor(a), neste site iremos passar informações sobre a linguagem de programação pwn que atualmente e utilizada no SAMP (San Andreas Multiplayer).<br>
+            Nosso objetivo é ajudar você no processo de apredizado da linguagem, apoiando com informações e tutoriais na sequência correta para aprender a desenvolver sistemas no samp.</p>
+            <ul>
+                <li><a href="#conceito">Conceito</a></li>
+                <li><a href="#tipos_variavel">Tipos de Variáveis</a></li>
+                <li><a href="#variavel_global">Variáveis Globais</a></li>
+                <li><a href="#variavel_local">Variáveis Locais</a></li>
+            </ul>
+            
+            <h2 id="conceito">Conceito:</h2>
+            <p>Uma variável tem uma função de armazenar um dado que poderá ser utilizado eventualmente, você poderá determinar em uma variável o seu respectivo <u>nome, tipo de dado e posição no código (local ou global)</u>.
+            <br>Para criar uma variável dentro da linguagem pawn você deverá utilizar a reservada palavra <b><u>new</u></b>
+            <p><b>Exemplo:</b></p>
+            <p><samp>new MinhaVariavel;</samp></p>        
+            </p>
+
+            <h2 id="tipos_variavel">Tipos de Variáveis:</h2>
+            <p>Existe alguns tipos de variáveis dentro da linguagem pawn, você precisará definir o tipo de variável de acordo com o dado que deseja armazenar.
+            <br>Os tipos são <b>int:</b> "valor inteiro '5'", <b>float:</b> "valor decimal 8.3452", <b>bool:</b> "valor boelano verdadeiro/false".
+            <br><br><u>Por padrão sempre que uma variável por criada, ela terá seu tipo definido como int: inteiro.</u>
+            </p>
+            <p><b>Exemplos de Criação:</b></p>
+            <p><samp>new valorInt - Perceba como foi citado acima, por não definir um valor no inicio já será derterminada como valor interior.
+            <br>new float:Posicao - Aqui será uma variável definida para guardar valores decimais.
+            <br>new bool:Condicao - Aqui será uma variável definida para guardar um valor verdeiro ou falso.</samp></p>
+            
+            <h2 id="variavel_global">Variaveis Globais:</h2>
+            <p>Ao contrário da variável local, a global poderá ser utilizada em qualquer parte de seu código do início ao fim.É sempre importante se perguntar antes se realmente será necessário a criação de uma variável global, 
+            <br>pois ela ficará ocupando espaço da memória do seu servidor enquanto ele estiver ligado. Para criar uma variável global, basta apenas adicionar a sintaxe abaixo fora qualquer bloco de comando.</p>
+            <p><b>Exemplo:</b></p>
+            <p><samp>new MinhaVariavelGlobal;</samp></code></p>
+            
+            <h2 id="variavel_local">Variaveis Locais:</h2>
+            <p>A variável local é usada apenas em uma determinada parte do código, sendo assim depois de executada ela será apagada da memória do servidor. 
+            <br>É importante sempre tentar utilizar variáveis locais em seu projeto, pois evitará ocupar espaço de memória do seu servidor.</p>
+            <p><b>Exemplo:</b></p>
+            <p><samp>public <a title="CallBack utilizada para quando o jogador adentrar no servidor.">OnPlayerConnect</a>(playerid)
+            <br>{
+            <br>&emsp;new varLocal;
+            <br>&emsp;return 1;
+            <br>}</samp>
+            <br><br>No exemplo acima, perceba que a variável "varLocal" está dentro da CallBack "OnPlayerConnect", sendo assim apenas funcionará quando um jogador conectar e logo em seguida apagará.
+            </p>
+            
+        </body>
+    </head>
+</html>
+
